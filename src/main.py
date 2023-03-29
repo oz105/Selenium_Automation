@@ -60,6 +60,7 @@ class PopupWindow:
 
     # will fill in the filed first name in the popup window
     def fill_in_first_name(self, first_name):
+        # check that it contains only letters
         if first_name.isalpha():
             try:
                 first_name_xpath = '//input[@name="firstname" and @class="hs-input"]'
@@ -75,7 +76,7 @@ class PopupWindow:
 
     # will fill in the filed last name in the popup window
     def fill_in_last_name(self, last_name):
-
+        # check that it contains only letters
         if last_name.isalpha():
             try:
                 last_name_xpath = '//input[@name="lastname" and @class="hs-input"]'
@@ -91,6 +92,7 @@ class PopupWindow:
 
     # will fill in the filed email in the popup window
     def fill_in_email(self, email):
+        # regex of valid email
         regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
         if re.fullmatch(regex, email):
             try:
@@ -107,6 +109,7 @@ class PopupWindow:
 
     # will fill in the filed phone number name in the popup window
     def fill_in_phone_number(self, phone_number):
+        # allow numbers and the char '+' check there is nothing else
         allowed = set(string.digits + '+')
         if set(phone_number) <= allowed:
 
