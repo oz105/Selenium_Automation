@@ -16,11 +16,11 @@ Returns True - after done all.
 
 ### test_first_name
       
-      In this test case we check if the first name not contains only chars it will raise exception because we cant submit if the name contains numbers.
+      In this test case we check if the first name contains only letters if not, it will raise exception because we cant submit if the name contains numbers.
 
 ### test_last_name
 
-      In this test case we check if the last name not contains only chars it will raise exception because we cant submit if the last name contains numbers.
+      In this test case we check if the last name contains only letters if not, it will raise exception because we cant submit if the last name contains numbers.
 
 ### test_email
       
